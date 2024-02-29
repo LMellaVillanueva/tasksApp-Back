@@ -1,9 +1,12 @@
 import express from 'express';
 import {dataBase} from './db/dataBase';
 import cors from 'cors';
+require('dotenv').config();
+
+const {PORT} = process.env;
+
 
 const server = express();
-const PORT = 3600;
 
 server.use(cors());
 server.use(express.json());
